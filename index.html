@@ -158,7 +158,7 @@
 				<p>The following code generates a list of all hyperlinks on <a href="https://www.google.com">https://www.google.com</a>:</p>
 				<code>Import["https://www.google.com", "Hyperlinks"]</code>
 				<br>
-				<iframe class="margin" style="display:inline" src="https://www.wolframcloud.com/objects/e8bf3559-9730-4274-88cb-a07a36724858?_embed=iframe"
+				<iframe class="margin" style="display:inline" src="https://www.wolframcloud.com/objects/d249ba91-1d77-4c16-8fc3-6dbaaf83b8cf?_embed=iframe"
 				width="800" height="300"></iframe>
 				<p>Elegant, right? Now, this slightly more complicated code will go to each of those links and get all the hyperlinks
 				from those new pages, and then it will generate a graph of all the resulting hyperlink connections:</p>
@@ -166,7 +166,7 @@
 				Graph[Flatten[Rest[NestList[Union[Flatten[Thread[# -> Import[#, "Hyperlinks"]] &amp; /@ Last /@ #]] &amp;, {"" -> "https://google.com"}, 2]]], ImageSize -> Large]
 				</code>
 				<br>
-				<iframe style="display:inline" src="https://www.wolframcloud.com/objects/3b3e838b-eb93-47dd-8ce2-2440d2f957f2?_embed=iframe"
+				<iframe style="display:inline" src="https://www.wolframcloud.com/objects/e4ea6d2f-0ea5-4aa0-b601-153c0ed75d63?_embed=iframe"
 				width="600" height="800"></iframe>
 			</div>
 		</div>
