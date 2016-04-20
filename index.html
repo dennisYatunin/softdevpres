@@ -1,1 +1,215 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Wolfram Mathematica</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href="logo.png">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style>
+		body {
+			font: 20px Courier, sans-serif; /* Default font in Mathematica 10 */
+			line-height: 1.8;
+			color: #f5f6f7;
+		}
+		body a {
+			text-decoration: underline;
+		}
+		p, li {
+			font-size: 16px;
+		}
+		ul {
+			list-style-position: inside;
+		}
+		code {
+			font-size: 16px;
+			color: gray;
+		}
+		.margin {
+			margin-bottom: 45px;
+		}
+		.popover {
+			color: #555555;
+		}
+		.bg-1, .bg-1 a {
+			background-color: #1abc9c; /* Green */
+			color: #ffffff;
+		}
+		.bg-2, .bg-2 a {
+			background-color: #474e5d; /* Dark Blue */
+			color: #ffffff;
+		}
+		.bg-3, .bg-3 a {
+			background-color: #ffffff; /* White */
+			color: #555555;
+		}
+		.bg-4, .bg-4 a {
+			background-color: #2f2f2f; /* Black Gray */
+			color: #fff;
+		}
+		.container-fluid {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container-fluid bg-1 text-center">
+		<h1 class="margin">Wolfram Mathematica</h1>
+		<img src="logo.png" class="img-responsive img-circle margin" style="display:inline" alt="Logo" width="250em">
+		<h3>By Dennis Yatunin</h3>
+	</div>
+
+	<div class="container-fluid bg-2 text-center">
+		<h1 class="margin">Origin Story</h1>
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="wolfram.png" class="img-responsive img-rounded margin" style="display:inline" alt="Stephen Wolfram" width="250em">
+			</div>
+			<div class="col-sm-7">
+				<p>Meet
+				<a target="_blank" href="http://www.stephenwolfram.com/about/">Stephen Wolfram</a>
+				, the man who slaps his last name on pretty much every product he makes,
+				which is entirely excusable given the sheer awesomeness of said products.</p>
+				<p>He is incredibly smart, having published his first scientific paper at age 15.
+				He dropped out of Oxford at 17 and proceded to receive a PhD in theoretical physics from Caltech by age 20.</p>
+				<p>While working out new physics equations, he decided to create a program to automate the work,
+				and thus he and Chris A. Cole made
+				<a target="_blank" href="http://www.stephenwolfram.com/publications/smp-symbolic-manipulation-program/">
+				Symbolic Manipulation Program</a>
+				- a precursor to Wolfram Mathematica.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid bg-3 text-center">
+		<h1 class="margin">So What is Mathematica?</h1>
+		<div class="row">
+			<div class="col-sm-offset-3 col-sm-6">
+				<blockquote>
+					<p>The world's definitive system for modern technical computing.</p>
+					<footer>From <a target="_blank" href="https://www.wolfram.com/mathematica/">Mathematica's website</a></footer>
+				</blockquote>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-3 col-sm-6">
+				<p class="margin">Technical computing is the application of the mathematical and
+				computational principles of scientific computing to solve practical problems</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-6">
+				<p>Mathematica is built on the <a target="_blank" href="https://www.wolfram.com/language/">Wolfram Language</a>,
+				which is based on the following principles:</p>
+				<ul>
+					<li>Build as much knowledge into the language as possible</li>
+					<li>Automate <i>as much as possible</i>, and let programmers concentrate on what they want to do
+					(there are approximately
+					<a target="_blank" href="http://reference.wolfram.com/language/">5,000 built-in functions</a>
+					)</li>
+					<li>Maximize readability and understandability</li>
+					<li>Make everything a
+					<a target="_blank" href="https://www.wolfram.com/language/fast-introduction-for-programmers/symbolic-expressions/">
+					symbolic expression</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-2">
+				<img src="language.png" class="img-responsive margin" style="display:inline; padding-top: 2em" alt="Wolfram Language">
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid bg-2 text-center">
+		<h1 class="margin">Symbols Are Awesome!</h1>
+		<p>Symbolic expressions make possible:</p>
+		<div class="row">
+			<div class="col-sm-offset-3 col-sm-6">
+				<ul>
+					<li>Incremental programming: any fragment of code is instantly runnable</li>
+					<li>Any form of data can immediately be represented within the system</li>
+					<li>Code can involve any kind of object, such as an image, document, etc.</li>
+					<li>Easy integration with <a href="https://www.wolfram.com/cloud/">Wolfram Cloud</a>!</li>
+				</ul>
+			</div>
+		</div>
+		<iframe style="display:inline" src="https://www.wolframcloud.com/objects/7e46ad2e-1339-4e7c-919f-cb317406aeb3?_embed=iframe"
+		width="600" height="600"></iframe>
+		<br>
+		<a href="javascript:;" data-toggle="popover" title="Code Snippet" data-content="EmbedCode[
+ CloudDeploy[
+  FormFunction[{&quot;location&quot; -> &quot;Location&quot;, &quot;radius&quot; -> &quot;Quantity&quot;},
+   GeoGraphics[GeoDisk[#location, #radius]] &amp;, &quot;PNG&quot;,
+   ImageSize -> 590,
+   AppearanceRules -> <|&quot;Title&quot; -> &quot;Draw a circle!&quot;,
+    &quot;Description&quot; ->
+     &quot;Enter a location (e.g. \&quot;New York\&quot;) and a radius (e.g. \&quot;100 \
+      km\&quot;).&quot;|>], Permissions -> &quot;Public&quot;]]">Click to view code</a>
+	</div>
+
+	<div class="container-fluid bg-3 text-center">
+		<h1 class="margin">A neat example</h1>
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-8">
+				<p>The following code generates a list of all hyperlinks on <a href="https://www.google.com">https://www.google.com</a>:</p>
+				<code>Import["https://www.google.com", "Hyperlinks"]</code>
+				<br>
+				<iframe class="margin" style="display:inline" src="https://www.wolframcloud.com/objects/e8bf3559-9730-4274-88cb-a07a36724858?_embed=iframe"
+				width="800" height="300"></iframe>
+				<p>Elegant, right? Now, this slightly more complicated code will go to each of those links and get all the hyperlinks
+				from those new pages, and then it will generate a graph of all the resulting hyperlink connections:</p>
+				<code>
+				Graph[Flatten[Rest[NestList[Union[Flatten[Thread[# -> Import[#, "Hyperlinks"]] &amp; /@ Last /@ #]] &amp;, {"" -> "https://google.com"}, 2]]], ImageSize -> Large]
+				</code>
+				<br>
+				<iframe style="display:inline" src="https://www.wolframcloud.com/objects/3b3e838b-eb93-47dd-8ce2-2440d2f957f2?_embed=iframe"
+				width="600" height="800"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid bg-2 text-center">
+		<h1 class="margin">One Last Example</h1>
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-8">
+				<p>The following function generates a fractal tree, taking as its arguments the coordinates of the base, the angle of the base relative to the horizontal, the length of each branch, the number of iterations, and a paramter &quot;a&quot; that determines the angle between branches:</p>
+				<code>
+					Tree[p1_, theta_, r_, i_, a_] :=
+					Module[{p2 = p1 + r {Cos[theta], Sin[theta]}, graphics}, graphics = {Thickness[0.07 r], RGBColor[0.5 r, 1 - r, 0], Line[{p1, p2}]};
+					If[i > 1, graphics = Join[graphics, {Tree[p2, theta - a*Pi/6, 0.8 r, i - 1, a], Tree[p2, theta + a*Pi/4, 0.7 r, i - 1, a]}]]; graphics];
+				</code>
+				<br><br><br>
+				<p>Then, the following code generates the cloud app below it:</p>
+				<code>
+					EmbedCode[
+					CloudDeploy[
+					FormFunction["parameter" -> "Number",
+					Show[Graphics[Tree[{0, 0}, Pi/2, 1.2, 9, #parameter],
+					AspectRatio -> 1, Background -> White,
+					PlotRange -> {{-3, 3}, {0, 6}}]] &amp;, "PNG", ImageSize -> 590,
+					AppearanceRules -> <|"Title" -> "Fractal Tree",
+					"Description" -> "Enter a number between 0 and 1."|>],
+					Permissions -> "Public"]]
+				</code>
+				<br><br><br>
+				<iframe style="display:inline" src="https://www.wolframcloud.com/objects/9362cac6-fcbb-4abe-8e1c-8099292d6e10?_embed=iframe"
+				width="600" height="600"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<footer class="container-fluid bg-4 text-center">
+		<h3>(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ✧ﾟ･: *ヽ(◕ヮ◕ヽ)</h3>
+	</footer>
+
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();
+		});
+	</script>
+</body>
+</html>
